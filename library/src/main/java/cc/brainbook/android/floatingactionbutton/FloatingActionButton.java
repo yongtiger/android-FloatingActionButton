@@ -47,14 +47,14 @@ public class FloatingActionButton extends androidx.appcompat.widget.AppCompatIma
   int mColorDisabled;
   String mTitle;
   @DrawableRes
-  private int mIcon;
-  private Drawable mIconDrawable;
-  private int mSize;
+  int mIcon;
+  Drawable mIconDrawable;
+  int mSize;
 
-  private float mCircleSize;
-  private float mShadowRadius;
-  private float mShadowOffset;
-  private int mDrawableSize;
+  float mCircleSize;
+  float mShadowRadius;
+  float mShadowOffset;
+  int mDrawableSize;
   boolean mStrokeVisible;
 
   public FloatingActionButton(Context context) {

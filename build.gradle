@@ -9,8 +9,8 @@ buildscript {
         ]
 
         release = [
-                versionName: "0.0.3",   ///v0.0.3#FloatingActionsMenu改为AddFloatingActionsMenu
-                versionCode: 3
+                versionName: "0.0.4",   ///v0.0.4#FloatingActionsMenu
+                versionCode: 4
         ]
     }
 
