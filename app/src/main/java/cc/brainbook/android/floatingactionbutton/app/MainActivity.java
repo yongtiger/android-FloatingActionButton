@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import cc.brainbook.android.floatingactionbutton.FloatingActionButton;
-import cc.brainbook.android.floatingactionbutton.FloatingActionsMenu;
+import cc.brainbook.android.floatingactionbutton.AddFloatingActionsMenu;
 
 
 public class MainActivity extends Activity {
@@ -42,14 +42,14 @@ public class MainActivity extends Activity {
             }
         });
 
-        final FloatingActionsMenu menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
+        final AddFloatingActionsMenu menuMultipleActions = (AddFloatingActionsMenu) findViewById(R.id.multiple_actions);
         menuMultipleActions.addButton(actionC);
 
         final FloatingActionButton removeAction = (FloatingActionButton) findViewById(R.id.button_remove);
         removeAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((FloatingActionsMenu) findViewById(R.id.multiple_actions_down)).removeButton(removeAction);
+                ((AddFloatingActionsMenu) findViewById(R.id.multiple_actions_down)).removeButton(removeAction);
             }
         });
 
@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        FloatingActionsMenu rightLabels = (FloatingActionsMenu) findViewById(R.id.right_labels);
+        AddFloatingActionsMenu rightLabels = (AddFloatingActionsMenu) findViewById(R.id.right_labels);
         FloatingActionButton addedOnce = new FloatingActionButton(this);
         addedOnce.setTitle("Added once");
         rightLabels.addButton(addedOnce);

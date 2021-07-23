@@ -57,7 +57,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"/>
 
-    <cc.brainbook.android.floatingactionbutton.FloatingActionsMenu
+    <cc.brainbook.android.floatingactionbutton.AddFloatingActionsMenu
         android:id="@+id/right_labels"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,12 +66,12 @@
         android:layout_above="@id/normal_plus"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        fab:fab_addButtonColorNormal="@color/white"
-        fab:fab_addButtonColorPressed="@color/white_pressed"
-        fab:fab_addButtonPlusIconColor="@color/half_black"
-        fab:fab_addButtonSize="mini"
-        fab:fab_labelStyle="@style/menu_labels_style"
-        fab:fab_labelsPosition="right">
+        fab:fam_addButtonColorNormal="@color/white"
+        fab:fam_addButtonColorPressed="@color/white_pressed"
+        fab:fam_addButtonPlusIconColor="@color/half_black"
+        fab:fam_addButtonSize="mini"
+        fab:fam_addLabelStyle="@style/menu_labels_style"
+        fab:fam_addLabelsPosition="right">
 
         <cc.brainbook.android.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
@@ -88,19 +88,19 @@
             fab:fab_title="Another one on the right"
             fab:fab_colorPressed="@color/white_pressed"/>
 
-    </cc.brainbook.android.floatingactionbutton.FloatingActionsMenu>
+    </cc.brainbook.android.floatingactionbutton.AddFloatingActionsMenu>
 
-    <cc.brainbook.android.floatingactionbutton.FloatingActionsMenu
+    <cc.brainbook.android.floatingactionbutton.AddFloatingActionsMenu
         android:id="@+id/multiple_actions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        fab:fab_addButtonColorNormal="@color/white"
-        fab:fab_addButtonColorPressed="@color/white_pressed"
-        fab:fab_addButtonPlusIconColor="@color/half_black"
-        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fam_addButtonColorNormal="@color/white"
+        fab:fam_addButtonColorPressed="@color/white_pressed"
+        fab:fam_addButtonPlusIconColor="@color/half_black"
+        fab:fam_addLabelStyle="@style/menu_labels_style"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp">
@@ -121,21 +121,21 @@
             fab:fab_title="Action with a very long name that won\'t fit on the screen"
             fab:fab_colorPressed="@color/white_pressed"/>
 
-    </cc.brainbook.android.floatingactionbutton.FloatingActionsMenu>
+    </cc.brainbook.android.floatingactionbutton.AddFloatingActionsMenu>
 
-    <cc.brainbook.android.floatingactionbutton.FloatingActionsMenu
+    <cc.brainbook.android.floatingactionbutton.AddFloatingActionsMenu
         android:id="@+id/multiple_actions_down"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        fab:fab_addButtonColorNormal="@color/white"
-        fab:fab_addButtonColorPressed="@color/white_pressed"
-        fab:fab_addButtonSize="mini"
-        fab:fab_addButtonPlusIconColor="@color/half_black"
-        fab:fab_expandDirection="down"
-        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fam_addButtonColorNormal="@color/white"
+        fab:fam_addButtonColorPressed="@color/white_pressed"
+        fab:fam_addButtonSize="mini"
+        fab:fam_addButtonPlusIconColor="@color/half_black"
+        fab:fam_addExpandDirection="down"
+        fab:fam_addLabelStyle="@style/menu_labels_style"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp">
@@ -170,21 +170,21 @@
             fab:fab_title="Set bottom menu enabled/disabled"
             fab:fab_colorPressed="@color/white_pressed"/>
 
-    </cc.brainbook.android.floatingactionbutton.FloatingActionsMenu>
+    </cc.brainbook.android.floatingactionbutton.AddFloatingActionsMenu>
 
-    <cc.brainbook.android.floatingactionbutton.FloatingActionsMenu
+    <cc.brainbook.android.floatingactionbutton.AddFloatingActionsMenu
         android:id="@+id/multiple_actions_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toLeftOf="@+id/multiple_actions_down"
         android:layout_toStartOf="@+id/multiple_actions_down"
         android:layout_alignParentTop="true"
-        fab:fab_addButtonColorNormal="@color/white"
-        fab:fab_addButtonColorPressed="@color/white_pressed"
-        fab:fab_addButtonSize="mini"
-        fab:fab_addButtonPlusIconColor="@color/half_black"
-        fab:fab_addButtonStrokeVisible="false"
-        fab:fab_expandDirection="left"
+        fab:fam_addButtonColorNormal="@color/white"
+        fab:fam_addButtonColorPressed="@color/white_pressed"
+        fab:fam_addButtonSize="mini"
+        fab:fam_addButtonPlusIconColor="@color/half_black"
+        fab:fam_addButtonStrokeVisible="false"
+        fab:fam_addExpandDirection="left"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp">
@@ -210,7 +210,7 @@
             fab:fab_colorPressed="@color/white_pressed"
             fab:fab_size="mini"/>
 
-    </cc.brainbook.android.floatingactionbutton.FloatingActionsMenu>
+    </cc.brainbook.android.floatingactionbutton.AddFloatingActionsMenu>
 
     <cc.brainbook.android.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"

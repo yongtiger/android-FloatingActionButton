@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <declare-styleable name="FloatingActionButton">
         <attr name="fab_colorPressed" format="color"/>
         <attr name="fab_colorDisabled" format="color"/>
@@ -12,28 +13,31 @@
         <attr name="fab_title" format="string"/>
         <attr name="fab_stroke_visible" format="boolean"/>
     </declare-styleable>
+
     <declare-styleable name="AddFloatingActionButton">
         <attr name="fab_plusIconColor" format="color"/>
     </declare-styleable>
-    <declare-styleable name="FloatingActionsMenu">
-        <attr name="fab_addButtonColorPressed" format="color"/>
-        <attr name="fab_addButtonColorNormal" format="color"/>
-        <attr name="fab_addButtonSize" format="enum">
+
+    <declare-styleable name="AddFloatingActionsMenu">
+        <attr name="fam_addButtonColorPressed" format="color"/>
+        <attr name="fam_addButtonColorNormal" format="color"/>
+        <attr name="fam_addButtonSize" format="enum">
             <enum name="normal" value="0"/>
             <enum name="mini" value="1"/>
         </attr>
-        <attr name="fab_addButtonPlusIconColor" format="color"/>
-        <attr name="fab_addButtonStrokeVisible" format="boolean"/>
-        <attr name="fab_labelStyle" format="reference"/>
-        <attr name="fab_labelsPosition" format="enum">
+        <attr name="fam_addButtonPlusIconColor" format="color"/>
+        <attr name="fam_addButtonStrokeVisible" format="boolean"/>
+        <attr name="fam_addLabelStyle" format="reference"/>
+        <attr name="fam_addLabelsPosition" format="enum">
             <enum name="left" value="0"/>
             <enum name="right" value="1"/>
         </attr>
-        <attr name="fab_expandDirection" format="enum">
+        <attr name="fam_addExpandDirection" format="enum">
             <enum name="up" value="0"/>
             <enum name="down" value="1"/>
             <enum name="left" value="2"/>
             <enum name="right" value="3"/>
         </attr>
     </declare-styleable>
+
 </resources>

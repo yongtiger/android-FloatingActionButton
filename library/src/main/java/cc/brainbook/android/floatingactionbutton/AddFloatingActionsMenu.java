@@ -25,7 +25,7 @@ import android.widget.TextView;
 import androidx.annotation.ColorRes;
 import androidx.annotation.NonNull;
 
-public class FloatingActionsMenu extends ViewGroup {
+public class AddFloatingActionsMenu extends ViewGroup {
   public static final int EXPAND_UP = 0;
   public static final int EXPAND_DOWN = 1;
   public static final int EXPAND_LEFT = 2;
@@ -70,16 +70,16 @@ public class FloatingActionsMenu extends ViewGroup {
     void onMenuCollapsed();
   }
 
-  public FloatingActionsMenu(Context context) {
+  public AddFloatingActionsMenu(Context context) {
     this(context, null);
   }
 
-  public FloatingActionsMenu(Context context, AttributeSet attrs) {
+  public AddFloatingActionsMenu(Context context, AttributeSet attrs) {
     super(context, attrs);
     init(context, attrs);
   }
 
-  public FloatingActionsMenu(Context context, AttributeSet attrs, int defStyle) {
+  public AddFloatingActionsMenu(Context context, AttributeSet attrs, int defStyle) {
     super(context, attrs, defStyle);
     init(context, attrs);
   }
@@ -92,15 +92,15 @@ public class FloatingActionsMenu extends ViewGroup {
     mTouchDelegateGroup = new TouchDelegateGroup(this);
     setTouchDelegate(mTouchDelegateGroup);
 
-    TypedArray attr = context.obtainStyledAttributes(attributeSet, R.styleable.FloatingActionsMenu, 0, 0);
-    mAddButtonPlusColor = attr.getColor(R.styleable.FloatingActionsMenu_fab_addButtonPlusIconColor, getColor(android.R.color.white));
-    mAddButtonColorNormal = attr.getColor(R.styleable.FloatingActionsMenu_fab_addButtonColorNormal, getColor(android.R.color.holo_blue_dark));
-    mAddButtonColorPressed = attr.getColor(R.styleable.FloatingActionsMenu_fab_addButtonColorPressed, getColor(android.R.color.holo_blue_light));
-    mAddButtonSize = attr.getInt(R.styleable.FloatingActionsMenu_fab_addButtonSize, FloatingActionButton.SIZE_NORMAL);
-    mAddButtonStrokeVisible = attr.getBoolean(R.styleable.FloatingActionsMenu_fab_addButtonStrokeVisible, true);
-    mExpandDirection = attr.getInt(R.styleable.FloatingActionsMenu_fab_expandDirection, EXPAND_UP);
-    mLabelsStyle = attr.getResourceId(R.styleable.FloatingActionsMenu_fab_labelStyle, 0);
-    mLabelsPosition = attr.getInt(R.styleable.FloatingActionsMenu_fab_labelsPosition, LABELS_ON_LEFT_SIDE);
+    TypedArray attr = context.obtainStyledAttributes(attributeSet, R.styleable.AddFloatingActionsMenu, 0, 0);
+    mAddButtonPlusColor = attr.getColor(R.styleable.AddFloatingActionsMenu_fam_addButtonPlusIconColor, getColor(android.R.color.white));
+    mAddButtonColorNormal = attr.getColor(R.styleable.AddFloatingActionsMenu_fam_addButtonColorNormal, getColor(android.R.color.holo_blue_dark));
+    mAddButtonColorPressed = attr.getColor(R.styleable.AddFloatingActionsMenu_fam_addButtonColorPressed, getColor(android.R.color.holo_blue_light));
+    mAddButtonSize = attr.getInt(R.styleable.AddFloatingActionsMenu_fam_addButtonSize, FloatingActionButton.SIZE_NORMAL);
+    mAddButtonStrokeVisible = attr.getBoolean(R.styleable.AddFloatingActionsMenu_fam_addButtonStrokeVisible, true);
+    mExpandDirection = attr.getInt(R.styleable.AddFloatingActionsMenu_fam_addExpandDirection, EXPAND_UP);
+    mLabelsStyle = attr.getResourceId(R.styleable.AddFloatingActionsMenu_fam_addLabelStyle, 0);
+    mLabelsPosition = attr.getInt(R.styleable.AddFloatingActionsMenu_fam_addLabelsPosition, LABELS_ON_LEFT_SIDE);
     attr.recycle();
 
     if (mLabelsStyle != 0 && expandsHorizontally()) {
