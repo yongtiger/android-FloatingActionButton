@@ -9,8 +9,8 @@ buildscript {
         ]
 
         release = [
-                versionName: "0.0.4",   ///v0.0.4#FloatingActionsMenu
-                versionCode: 4
+                versionName: "0.0.5",   ///v0.0.5#[FIX#Consider using Resources.getDrawable(int, Theme) or Context.getDrawable(int)]
+                versionCode: 5
         ]
     }
 

@@ -28,6 +28,7 @@ import androidx.annotation.DimenRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
+import androidx.core.content.res.ResourcesCompat;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -233,7 +234,7 @@ public class FloatingActionButton extends androidx.appcompat.widget.AppCompatIma
 
     LayerDrawable layerDrawable = new LayerDrawable(
         new Drawable[] {
-            getResources().getDrawable(mSize == SIZE_NORMAL ? R.drawable.fab_bg_normal : R.drawable.fab_bg_mini),
+            ResourcesCompat.getDrawable(getResources(), mSize == SIZE_NORMAL ? R.drawable.fab_bg_normal : R.drawable.fab_bg_mini, getContext().getTheme()),
             createFillDrawable(strokeWidth),
             createOuterStrokeDrawable(strokeWidth),
             getIconDrawable()
@@ -270,7 +271,7 @@ public class FloatingActionButton extends androidx.appcompat.widget.AppCompatIma
     if (mIconDrawable != null) {
       return mIconDrawable;
     } else if (mIcon != 0) {
-      return getResources().getDrawable(mIcon);
+      return ResourcesCompat.getDrawable(getResources(), mIcon, getContext().getTheme());
     } else {
       return new ColorDrawable(Color.TRANSPARENT);
     }
