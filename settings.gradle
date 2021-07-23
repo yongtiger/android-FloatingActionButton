@@ -1,0 +1,3 @@
+rootProject.name = "android-FloatingActionButton"
+include ':app'
+include ':library'
