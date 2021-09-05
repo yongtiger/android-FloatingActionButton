@@ -84,7 +84,7 @@ public class AddFloatingActionsMenu extends ViewGroup {
     init(context, attrs);
   }
 
-  private void init(Context context, AttributeSet attributeSet) {
+  private void init(@NonNull Context context, AttributeSet attributeSet) {
     mButtonSpacing = (int) (getResources().getDimension(R.dimen.fab_actions_spacing) - getResources().getDimension(R.dimen.fab_shadow_radius) - getResources().getDimension(R.dimen.fab_shadow_offset));
     mLabelsMargin = getResources().getDimensionPixelSize(R.dimen.fab_labels_margin);
     mLabelsVerticalOffset = getResources().getDimensionPixelSize(R.dimen.fab_shadow_offset);

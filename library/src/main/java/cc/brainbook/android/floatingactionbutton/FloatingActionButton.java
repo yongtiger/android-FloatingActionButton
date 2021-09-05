@@ -72,7 +72,7 @@ public class FloatingActionButton extends androidx.appcompat.widget.AppCompatIma
     init(context, attrs);
   }
 
-  void init(Context context, AttributeSet attributeSet) {
+  void init(@NonNull Context context, AttributeSet attributeSet) {
     TypedArray attr = context.obtainStyledAttributes(attributeSet, R.styleable.FloatingActionButton, 0, 0);
     mColorNormal = attr.getColor(R.styleable.FloatingActionButton_fab_colorNormal, getColor(android.R.color.holo_blue_dark));
     mColorPressed = attr.getColor(R.styleable.FloatingActionButton_fab_colorPressed, getColor(android.R.color.holo_blue_light));
