@@ -29,14 +29,18 @@
         <attr name="fam_addButtonStrokeVisible" format="boolean"/>
         <attr name="fam_addLabelStyle" format="reference"/>
         <attr name="fam_addLabelsPosition" format="enum">
-            <enum name="left" value="0"/>
-            <enum name="right" value="1"/>
+            <enum name="start" value="0"/>
+            <enum name="end" value="1"/>
+            <enum name="left" value="2"/>
+            <enum name="right" value="3"/>
         </attr>
         <attr name="fam_addExpandDirection" format="enum">
             <enum name="up" value="0"/>
             <enum name="down" value="1"/>
-            <enum name="left" value="2"/>
-            <enum name="right" value="3"/>
+            <enum name="start" value="2"/>
+            <enum name="end" value="3"/>
+            <enum name="left" value="4"/>
+            <enum name="right" value="5"/>
         </attr>
     </declare-styleable>
 
@@ -50,14 +54,18 @@
         <attr name="fam_ButtonStrokeVisible" format="boolean"/>
         <attr name="fam_LabelStyle" format="reference"/>
         <attr name="fam_LabelsPosition" format="enum">
-            <enum name="left" value="0"/>
-            <enum name="right" value="1"/>
+            <enum name="start" value="0"/>
+            <enum name="end" value="1"/>
+            <enum name="left" value="2"/>
+            <enum name="right" value="3"/>
         </attr>
         <attr name="fam_ExpandDirection" format="enum">
             <enum name="up" value="0"/>
             <enum name="down" value="1"/>
-            <enum name="left" value="2"/>
-            <enum name="right" value="3"/>
+            <enum name="start" value="2"/>
+            <enum name="end" value="3"/>
+            <enum name="left" value="4"/>
+            <enum name="right" value="5"/>
         </attr>
         <attr name="fam_icon" format="reference"/>
     </declare-styleable>

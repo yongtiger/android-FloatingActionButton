@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        AddFloatingActionsMenu rightLabels = (AddFloatingActionsMenu) findViewById(R.id.right_labels);
+        AddFloatingActionsMenu rightLabels = (AddFloatingActionsMenu) findViewById(R.id.end_labels);
         FloatingActionButton addedOnce = new FloatingActionButton(this);
         addedOnce.setTitle("Added once");
         rightLabels.addButton(addedOnce);
