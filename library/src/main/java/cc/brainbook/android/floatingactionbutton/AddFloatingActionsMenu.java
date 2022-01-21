@@ -304,14 +304,14 @@ public class AddFloatingActionsMenu extends ViewGroup {
 
         int addButtonY = expandUp ? b - t - mAddButton.getMeasuredHeight() : 0;
         // Ensure mAddButton is centered on the line where the buttons should be
-        int buttonsHorizontalCenter = mLabelsPosition == LABELS_ON_LEFT_SIDE || mLabelsPosition == LABELS_ON_START_SIDE && !isRtl
+        int buttonsHorizontalCenter = mLabelsPosition == LABELS_ON_LEFT_SIDE || mLabelsPosition == LABELS_ON_START_SIDE && !isRtl || mLabelsPosition == LABELS_ON_END_SIDE && isRtl
                 ? r - l - mMaxButtonWidth / 2
                 : mMaxButtonWidth / 2;
         int addButtonLeft = buttonsHorizontalCenter - mAddButton.getMeasuredWidth() / 2;
         mAddButton.layout(addButtonLeft, addButtonY, addButtonLeft + mAddButton.getMeasuredWidth(), addButtonY + mAddButton.getMeasuredHeight());
 
         int labelsOffset = mMaxButtonWidth / 2 + mLabelsMargin;
-        int labelsXNearButton = mLabelsPosition == LABELS_ON_LEFT_SIDE || mLabelsPosition == LABELS_ON_START_SIDE && !isRtl
+        int labelsXNearButton = mLabelsPosition == LABELS_ON_LEFT_SIDE || mLabelsPosition == LABELS_ON_START_SIDE && !isRtl || mLabelsPosition == LABELS_ON_END_SIDE && isRtl
                 ? buttonsHorizontalCenter - labelsOffset
                 : buttonsHorizontalCenter + labelsOffset;
 
@@ -341,15 +341,15 @@ public class AddFloatingActionsMenu extends ViewGroup {
 
           View label = (View) child.getTag(R.id.fab_label);
           if (label != null) {
-            int labelXAwayFromButton = mLabelsPosition == LABELS_ON_LEFT_SIDE || mLabelsPosition == LABELS_ON_START_SIDE && !isRtl
+            int labelXAwayFromButton = mLabelsPosition == LABELS_ON_LEFT_SIDE || mLabelsPosition == LABELS_ON_START_SIDE && !isRtl || mLabelsPosition == LABELS_ON_END_SIDE && isRtl
                     ? labelsXNearButton - label.getMeasuredWidth()
                     : labelsXNearButton + label.getMeasuredWidth();
 
-            int labelLeft = mLabelsPosition == LABELS_ON_LEFT_SIDE || mLabelsPosition == LABELS_ON_START_SIDE && !isRtl
+            int labelLeft = mLabelsPosition == LABELS_ON_LEFT_SIDE || mLabelsPosition == LABELS_ON_START_SIDE && !isRtl || mLabelsPosition == LABELS_ON_END_SIDE && isRtl
                     ? labelXAwayFromButton
                     : labelsXNearButton;
 
-            int labelRight = mLabelsPosition == LABELS_ON_LEFT_SIDE || mLabelsPosition == LABELS_ON_START_SIDE && !isRtl
+            int labelRight = mLabelsPosition == LABELS_ON_LEFT_SIDE || mLabelsPosition == LABELS_ON_START_SIDE && !isRtl || mLabelsPosition == LABELS_ON_END_SIDE && isRtl
                     ? labelsXNearButton
                     : labelXAwayFromButton;
 

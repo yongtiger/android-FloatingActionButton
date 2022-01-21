@@ -9,8 +9,8 @@ buildscript {
         ]
 
         release = [
-                versionName: "0.1.2",   ///v0.1.2#RTL适配#加入start/end属性
-                versionCode: 102
+                versionName: "0.1.3",   ///v0.1.3#RTL适配#加入start/end属性
+                versionCode: 103
         ]
     }
 
