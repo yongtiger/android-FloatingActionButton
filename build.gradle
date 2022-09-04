@@ -9,8 +9,8 @@ buildscript {
         ]
 
         release = [
-                versionName: "0.3.4",   ///v0.3.4#[FIX#Drag#FloatingActionsMenu#isDraggable]
-                versionCode: 304
+                versionName: "0.3.5",   ///v0.3.5#fix
+                versionCode: 305
         ]
     }
 

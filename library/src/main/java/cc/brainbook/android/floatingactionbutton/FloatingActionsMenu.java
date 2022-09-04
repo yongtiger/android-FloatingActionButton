@@ -270,7 +270,7 @@ public class FloatingActionsMenu extends ViewGroup {
         for (int i = 0; i < mButtonsCount; i++) {
             View child = getChildAt(i);
 
-            if (child.getVisibility() != INVISIBLE) {
+            if (child.getVisibility() != VISIBLE) {
                 continue;
             }
 
@@ -356,7 +356,7 @@ public class FloatingActionsMenu extends ViewGroup {
                 for (int i = mButtonsCount - 1; i >= 0; i--) {
                     final View child = getChildAt(i);
 
-                    if (child == mFloatingActionButton || child.getVisibility() != INVISIBLE) continue;
+                    if (child == mFloatingActionButton || child.getVisibility() != VISIBLE) continue;
 
                     int childX = buttonsHorizontalCenter - child.getMeasuredWidth() / 2;
                     int childY = expandUp ? nextY - child.getMeasuredHeight() : nextY;
@@ -430,7 +430,7 @@ public class FloatingActionsMenu extends ViewGroup {
                 for (int i = mButtonsCount - 1; i >= 0; i--) {
                     final View child = getChildAt(i);
 
-                    if (child == mFloatingActionButton || child.getVisibility() != INVISIBLE) continue;
+                    if (child == mFloatingActionButton || child.getVisibility() != VISIBLE) continue;
 
                     int childX = expandLeft ? nextX - child.getMeasuredWidth() : nextX;
                     int childY = fabTop + (mFloatingActionButton.getMeasuredHeight() - child.getMeasuredHeight()) / 2;
