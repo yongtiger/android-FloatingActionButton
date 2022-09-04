@@ -123,6 +123,28 @@ public class FloatingActionsMenu extends ViewGroup {
         }
 
         createFloatingActionButton(context);
+
+        ///[FIX#Drag#折叠时应传递点击事件，child.setVisibility(GONE)]
+        mCollapseAnimation.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                for (int i = 0; i < mButtonsCount; i++) {
+                    FloatingActionButton child = (FloatingActionButton) getChildAt(i);
+                    if (child == mFloatingActionButton || child.getVisibility() == GONE) continue;
+                    child.setVisibility(GONE);
+                }
+            }
+        });
+        mExpandAnimation.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                for (int i = 0; i < mButtonsCount; i++) {
+                    FloatingActionButton child = (FloatingActionButton) getChildAt(i);
+                    if (child == mFloatingActionButton || child.getVisibility() == VISIBLE) continue;
+                    child.setVisibility(VISIBLE);
+                }
+            }
+        });
     }
 
     public void setOnFloatingActionsMenuUpdateListener(OnFloatingActionsMenuUpdateListener listener) {
