@@ -124,14 +124,14 @@ public class FloatingActionsMenu extends ViewGroup {
 
         createFloatingActionButton(context);
 
-        ///[FIX#Drag#折叠时应传递点击事件，child.setVisibility(GONE)]
+        ///[FIX#Drag#折叠时应传递点击事件，child.setVisibility(INVISIBLE)]
         mCollapseAnimation.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
                 for (int i = 0; i < mButtonsCount; i++) {
                     FloatingActionButton child = (FloatingActionButton) getChildAt(i);
-                    if (child == mFloatingActionButton || child.getVisibility() == GONE) continue;
-                    child.setVisibility(GONE);
+                    if (child == mFloatingActionButton) continue;
+                    child.setVisibility(INVISIBLE);
                 }
             }
         });
@@ -140,8 +140,9 @@ public class FloatingActionsMenu extends ViewGroup {
             public void onAnimationEnd(Animator animation) {
                 for (int i = 0; i < mButtonsCount; i++) {
                     FloatingActionButton child = (FloatingActionButton) getChildAt(i);
-                    if (child == mFloatingActionButton || child.getVisibility() == VISIBLE) continue;
+                    if (child == mFloatingActionButton) continue;
                     child.setVisibility(VISIBLE);
+                    child.isDraggable(false);
                 }
             }
         });
@@ -214,6 +215,7 @@ public class FloatingActionsMenu extends ViewGroup {
             }
         };
 
+        mFloatingActionButton.isDraggable(true);
         mFloatingActionButton.setId(R.id.fab_expand_menu_button);
         mFloatingActionButton.setSize(mButtonSize);
         mFloatingActionButton.setOnClickListener(new OnClickListener() {
@@ -228,6 +230,8 @@ public class FloatingActionsMenu extends ViewGroup {
     }
 
     public void addButton(FloatingActionButton button) {
+        button.setVisibility(INVISIBLE); ///FAM中的FAB初始化为setVisibility(INVISIBLE)
+        button.isDraggable(false);
         addView(button, mButtonsCount - 1);
         mButtonsCount++;
 
@@ -261,7 +265,7 @@ public class FloatingActionsMenu extends ViewGroup {
         for (int i = 0; i < mButtonsCount; i++) {
             View child = getChildAt(i);
 
-            if (child.getVisibility() == GONE) {
+            if (child.getVisibility() != INVISIBLE) {
                 continue;
             }
 
@@ -347,7 +351,7 @@ public class FloatingActionsMenu extends ViewGroup {
                 for (int i = mButtonsCount - 1; i >= 0; i--) {
                     final View child = getChildAt(i);
 
-                    if (child == mFloatingActionButton || child.getVisibility() == GONE) continue;
+                    if (child == mFloatingActionButton || child.getVisibility() != INVISIBLE) continue;
 
                     int childX = buttonsHorizontalCenter - child.getMeasuredWidth() / 2;
                     int childY = expandUp ? nextY - child.getMeasuredHeight() : nextY;
@@ -421,7 +425,7 @@ public class FloatingActionsMenu extends ViewGroup {
                 for (int i = mButtonsCount - 1; i >= 0; i--) {
                     final View child = getChildAt(i);
 
-                    if (child == mFloatingActionButton || child.getVisibility() == GONE) continue;
+                    if (child == mFloatingActionButton || child.getVisibility() != INVISIBLE) continue;
 
                     int childX = expandLeft ? nextX - child.getMeasuredWidth() : nextX;
                     int childY = fabTop + (mFloatingActionButton.getMeasuredHeight() - child.getMeasuredHeight()) / 2;

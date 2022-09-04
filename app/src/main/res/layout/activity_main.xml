@@ -69,17 +69,21 @@
         fab:fam_addLabelStyle="@style/menu_labels_style"
         fab:fam_addLabelsPosition="end">
 
+        <!--///FAM中的FAB初始化为setVisibility(INVISIBLE)-->
         <cc.brainbook.android.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             fab:fab_colorNormal="@color/white"
             fab:fab_title="Label on the end"
             fab:fab_colorPressed="@color/white_pressed"/>
 
+        <!--///FAM中的FAB初始化为setVisibility(INVISIBLE)-->
         <cc.brainbook.android.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
+            android:visibility="invisible"
             fab:fab_size="mini"
             fab:fab_title="Another one on the end"
             fab:fab_colorPressed="@color/white_pressed"/>
@@ -99,18 +103,22 @@
         fab:fam_addButtonPlusIconColor="@color/half_black"
         fab:fam_addLabelStyle="@style/menu_labels_style">
 
+        <!--///FAM中的FAB初始化为setVisibility(INVISIBLE)-->
         <cc.brainbook.android.floatingactionbutton.FloatingActionButton
             android:id="@+id/action_a"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
             fab:fab_title="Action A" />
 
+        <!--///FAM中的FAB初始化为setVisibility(INVISIBLE)-->
         <cc.brainbook.android.floatingactionbutton.FloatingActionButton
             android:id="@+id/action_b"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
             fab:fab_title="Action with a very long name that won\'t fit on the screen" />
@@ -179,32 +187,40 @@
         fab:fam_LabelStyle="@style/menu_labels_style"
         fab:fam_icon="@drawable/ic_fab_star">
 
+        <!--///FAM中的FAB初始化为setVisibility(INVISIBLE)-->
         <cc.brainbook.android.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
             fab:fab_size="mini" />
 
+        <!--///FAM中的FAB初始化为setVisibility(INVISIBLE)-->
         <cc.brainbook.android.floatingactionbutton.FloatingActionButton
             android:id="@+id/button_remove"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
             fab:fab_title="Click to remove" />
 
+        <!--///FAM中的FAB初始化为setVisibility(INVISIBLE)-->
         <cc.brainbook.android.floatingactionbutton.FloatingActionButton
             android:id="@+id/button_gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed" />
 
+        <!--///FAM中的FAB初始化为setVisibility(INVISIBLE)-->
         <cc.brainbook.android.floatingactionbutton.FloatingActionButton
             android:id="@+id/action_enable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
             fab:fab_title="Set bottom menu enabled/disabled" />
@@ -226,23 +242,28 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp">
 
+        <!--///FAM中的FAB初始化为setVisibility(INVISIBLE)-->
         <cc.brainbook.android.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"/>
 
+        <!--///FAM中的FAB初始化为setVisibility(INVISIBLE)-->
         <cc.brainbook.android.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
             fab:fab_size="mini"/>
 
+        <!--///FAM中的FAB初始化为setVisibility(INVISIBLE)-->
         <cc.brainbook.android.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
+            android:visibility="invisible"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
             fab:fab_size="mini"/>
@@ -255,4 +276,5 @@
         android:id="@+id/setter_drawable"
         android:layout_above="@id/setter"
         android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>
