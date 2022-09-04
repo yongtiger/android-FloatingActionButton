@@ -47,6 +47,11 @@ public class FloatingActionsMenu extends ViewGroup {
     private static final float COLLAPSED_PLUS_ROTATION = 0f;
     private static final float EXPANDED_PLUS_ROTATION = 90f + 45f;
 
+    boolean isDraggable;
+    public void isDraggable(boolean isDraggable) {
+        this.isDraggable = isDraggable;
+    }
+
     @DrawableRes
     private int mIconA;
 
@@ -215,7 +220,7 @@ public class FloatingActionsMenu extends ViewGroup {
             }
         };
 
-        mFloatingActionButton.isDraggable(true);
+        mFloatingActionButton.isDraggable(isDraggable);
         mFloatingActionButton.setId(R.id.fab_expand_menu_button);
         mFloatingActionButton.setSize(mButtonSize);
         mFloatingActionButton.setOnClickListener(new OnClickListener() {

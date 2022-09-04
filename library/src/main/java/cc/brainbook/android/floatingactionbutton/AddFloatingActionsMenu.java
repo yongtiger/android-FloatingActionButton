@@ -46,6 +46,11 @@ public class AddFloatingActionsMenu extends ViewGroup {
     private static final float COLLAPSED_PLUS_ROTATION = 0f;
     private static final float EXPANDED_PLUS_ROTATION = 90f + 45f;
 
+    boolean isDraggable;
+    public void isDraggable(boolean isDraggable) {
+        this.isDraggable = isDraggable;
+    }
+
     private int mAddButtonPlusColor;
     private int mAddButtonColorNormal;
     private int mAddButtonColorPressed;
@@ -212,7 +217,7 @@ public class AddFloatingActionsMenu extends ViewGroup {
             }
         };
 
-        mAddButton.isDraggable(true);
+        mAddButton.isDraggable(isDraggable);
         mAddButton.setId(R.id.fab_expand_menu_button);
         mAddButton.setSize(mAddButtonSize);
         mAddButton.setOnClickListener(new OnClickListener() {
