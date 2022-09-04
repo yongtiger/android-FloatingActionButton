@@ -11,7 +11,8 @@
             <enum name="mini" value="1"/>
         </attr>
         <attr name="fab_title" format="string"/>
-        <attr name="fab_stroke_visible" format="boolean"/>
+        <attr name="fab_strokeVisible" format="boolean"/>
+        <attr name="fab_isDraggable" format="boolean"/>
     </declare-styleable>
 
     <declare-styleable name="AddFloatingActionButton">
@@ -42,6 +43,7 @@
             <enum name="left" value="4"/>
             <enum name="right" value="5"/>
         </attr>
+        <attr name="fam_addIsDraggable" format="boolean"/>
     </declare-styleable>
 
     <declare-styleable name="FloatingActionsMenu">
@@ -68,6 +70,7 @@
             <enum name="right" value="5"/>
         </attr>
         <attr name="fam_icon" format="reference"/>
+        <attr name="fam_isDraggable" format="boolean"/>
     </declare-styleable>
 
 </resources>

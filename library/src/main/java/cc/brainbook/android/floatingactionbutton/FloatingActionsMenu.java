@@ -50,6 +50,10 @@ public class FloatingActionsMenu extends ViewGroup {
     boolean isDraggable;
     public void isDraggable(boolean isDraggable) {
         this.isDraggable = isDraggable;
+
+        if (mFloatingActionButton != null) {
+            mFloatingActionButton.isDraggable(isDraggable);
+        }
     }
 
     @DrawableRes
@@ -121,6 +125,7 @@ public class FloatingActionsMenu extends ViewGroup {
         mLabelsStyle = attr.getResourceId(R.styleable.FloatingActionsMenu_fam_LabelStyle, 0);
         mLabelsPosition = attr.getInt(R.styleable.FloatingActionsMenu_fam_LabelsPosition, LABELS_ON_START_SIDE);
         mIconA = attr.getResourceId(R.styleable.FloatingActionsMenu_fam_icon, 0);
+        isDraggable = attr.getBoolean(R.styleable.FloatingActionsMenu_fam_isDraggable, false);
         attr.recycle();
 
         if (mLabelsStyle != 0 && expandsHorizontally()) {
@@ -142,7 +147,7 @@ public class FloatingActionsMenu extends ViewGroup {
         });
         mExpandAnimation.addListener(new AnimatorListenerAdapter() {
             @Override
-            public void onAnimationEnd(Animator animation) {
+            public void onAnimationStart(Animator animation) {
                 for (int i = 0; i < mButtonsCount; i++) {
                     FloatingActionButton child = (FloatingActionButton) getChildAt(i);
                     if (child == mFloatingActionButton) continue;
@@ -270,7 +275,7 @@ public class FloatingActionsMenu extends ViewGroup {
         for (int i = 0; i < mButtonsCount; i++) {
             View child = getChildAt(i);
 
-            if (child.getVisibility() != VISIBLE) {
+            if (child.getVisibility() == GONE) {
                 continue;
             }
 
@@ -356,7 +361,7 @@ public class FloatingActionsMenu extends ViewGroup {
                 for (int i = mButtonsCount - 1; i >= 0; i--) {
                     final View child = getChildAt(i);
 
-                    if (child == mFloatingActionButton || child.getVisibility() != VISIBLE) continue;
+                    if (child == mFloatingActionButton || child.getVisibility() == GONE) continue;
 
                     int childX = buttonsHorizontalCenter - child.getMeasuredWidth() / 2;
                     int childY = expandUp ? nextY - child.getMeasuredHeight() : nextY;
@@ -430,7 +435,7 @@ public class FloatingActionsMenu extends ViewGroup {
                 for (int i = mButtonsCount - 1; i >= 0; i--) {
                     final View child = getChildAt(i);
 
-                    if (child == mFloatingActionButton || child.getVisibility() != VISIBLE) continue;
+                    if (child == mFloatingActionButton || child.getVisibility() == GONE) continue;
 
                     int childX = expandLeft ? nextX - child.getMeasuredWidth() : nextX;
                     int childY = fabTop + (mFloatingActionButton.getMeasuredHeight() - child.getMeasuredHeight()) / 2;

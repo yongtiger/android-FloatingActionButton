@@ -90,7 +90,8 @@ public class FloatingActionButton extends androidx.appcompat.widget.AppCompatIma
         mSize = attr.getInt(R.styleable.FloatingActionButton_fab_size, SIZE_NORMAL);
         mIcon = attr.getResourceId(R.styleable.FloatingActionButton_fab_icon, 0);
         mTitle = attr.getString(R.styleable.FloatingActionButton_fab_title);
-        mStrokeVisible = attr.getBoolean(R.styleable.FloatingActionButton_fab_stroke_visible, true);
+        mStrokeVisible = attr.getBoolean(R.styleable.FloatingActionButton_fab_strokeVisible, true);
+        isDraggable = attr.getBoolean(R.styleable.FloatingActionButton_fab_isDraggable, false);
         attr.recycle();
 
         updateCircleSize();
