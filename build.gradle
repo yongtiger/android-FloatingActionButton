@@ -9,8 +9,8 @@ buildscript {
         ]
 
         release = [
-                versionName: "0.3.0",   ///v0.3.0#[UPGRADE#Drag]
-                versionCode: 300
+                versionName: "0.3.1",   ///v0.3.1#[FIX#Drag#折叠时应传递点击事件，child.setVisibility(GONE)]
+                versionCode: 301
         ]
     }
 
